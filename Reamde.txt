@@ -1,0 +1,24 @@
+Codes to replicate "Household heterogeneity and the transmission of foreign shocks", by de Ferra, Mitman, Romei. Journal of International Economics, Volume 124, May 2020, 103303
+The authors thank Maria Eskelinen for outstanding reasearch assistance. For questions and feedback: sergio.deferra@economics.ox.ac.uk, federica.romei@economics.ox.ac.uk, kurt.mitman@iies.su.se
+
+
+Files in the folder:
+
+1. main.m
+Calibrates and solves the HANKSOME model for Hungary, and creates figures 1-5 from the paper. 
+To speed up the code, the correct solution of beta is used as an initial guess in row 203. Steady states and transitions are solved for by using the endogenous grid point method.
+
+2. MIT_transition.m
+Contains the loop that solves for the transition between the two steady states and for the contraction in foreign credit using the endogenous grid point method. To speed up the code, the solution for the transition between the two steady states is used as an initial guess (matrix transition_start.mat in row 93).
+
+3. figures.m
+Recreates the figures 1-5 from the paper. Can be run without running the main file, it then uses the solution_figures.mat provided.
+
+4. Steady_State_Ayagari-folder
+Contains the functions used when solving and calibrating the steady state values of beta and r.
+
+5. Transition-folder
+Contains the functions used when solving for the transition from one steady state to another or for the shock to foreign credit.
+
+6. Exogenous_files-folder
+Contains any other functions used by the main codes.
